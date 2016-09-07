@@ -5,9 +5,11 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 users = []
 
+
 @app.route('/user', methods=['GET'])
 def list_users():
     return jsonify(users)
+
 
 @app.route('/user', methods=['POST'])
 def create_user():
